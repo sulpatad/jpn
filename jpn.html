@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body style="background-color:grey">
+
+<p>What Japanese word would you like to multisearch? Type below, then press enter please.</p>
+<input type="text" id="boxu" autofocus>
+
+		<script>
+document.getElementById("boxu").onkeydown = function(e) {searchy(e)};
+function searchy(e)
+{
+	if (e.which == 13)
+	{
+	 var q = document.getElementById("boxu").value;
+	 window.open("http://www.google.jp/search?q=" + q + "&num=10&hl=jp&tbo=d&site=imghp&tbm=isch&sout=1&biw=1075&bih=696");
+	 window.open("http://www.forvo.com/word/" + q + "/#jp");
+	 window.open("http://www.weblio.jp/content/" + q);
+	 window.open("http://jisho.org/search/" + q);
+	 window.open("http://eow.alc.co.jp/search?q=" + q + "&ref=sa" + q);
+	 window.open("http://honyakustar.com/jp/" + q);
+	 window.open("http://tangorin.com/general/" + q);
+	 window.open("http://www.tanoshiijapanese.com/dictionary/index.cfm?j=" + q + "&e=&search=Search+%3E");
+	 window.open("http://www.kanjidamage.com/kanji/search?utf8=✓&q=" + q);
+	 document.getElementById("boxu").value = "";
+	}
+}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body style="background-color:grey" onload="init()">
+
+<p>What Japanese word would you like to multisearch? Type below, then press enter please.</p>
+<input type="text" id="boxu" autofocus>
+
+<script>
+	var w1 = null,w2=null,w3=null,w4=null,w5=null,w6=null,w7=null,w8=null,w9=null,w10=null;
+	function init() {
+		console.log('init');
+		// var websitevars = {w1,w2,w3};
+
+	}
+
+	document.getElementById("boxu").onkeydown = function(e) {searchy(e)};
+	function searchy(e)
+	{
+		if (e.which == 13)
+		{
+			var q = document.getElementById("boxu").value;
+			// var websites = {
+			// 	"http://www.google.jp/search?q=" + q + "&num=10&hl=jp&tbo=d&site=imghp&tbm=isch&sout=1&biw=1075&bih=696",
+			// 	"http://www.forvo.com/word/" + q + "/#jp",
+			// 	"http://www.weblio.jp/content/" + q
+			// }
+
+			// for (var i=0;i<websites.length;i++) {
+			// 	if(websitevars[i] == null || websitevars[i].closed) {
+			// 		websitevars[i] = window.open(websites[i]);
+			// 	} else {
+			// 		websitevars[i].location.href=websites[i];
+			// 	}
+			// }
+
+			if(w1 == null || w1.closed) {
+				w1 = window.open("http://www.google.jp/search?q=" + q + "&num=10&hl=jp&tbo=d&site=imghp&tbm=isch&sout=1&biw=1075&bih=696");
+			} else {
+				w1.location.href="http://www.google.jp/search?q=" + q + "&num=10&hl=jp&tbo=d&site=imghp&tbm=isch&sout=1&biw=1075&bih=696";
+			};
+
+			if(w2 == null || w2.closed) {
+				w2 = window.open("http://www.forvo.com/word/" + q + "/#jp");
+			} else {
+				w2.location.href="http://www.forvo.com/word/" + q + "/#jp";
+			};
+
+
+			if(w3 == null || w3.closed) {
+				w3 = window.open("http://www.weblio.jp/content/" + q);
+			} else {
+				w3.location.href="http://www.weblio.jp/content/" + q;
+			};
+
+
+			if(w4 == null || w4.closed) {
+				w4 = window.open("http://jisho.org/search/" + q);
+			} else {
+				w4.location.href="http://jisho.org/search/" + q;
+			};
+
+			if(w5 == null || w5.closed) {
+				w5 = window.open("http://eow.alc.co.jp/search?q=" + q + "&ref=sa" + q);
+			} else {
+				w5.location.href="http://eow.alc.co.jp/search?q=" + q + "&ref=sa" + q;
+			};
+
+			if(w6 == null || w6.closed) {
+				w6 = window.open("http://honyakustar.com/jp/" + q);
+			} else {
+				w6.location.href="http://honyakustar.com/jp/" + q;
+			};
+
+			if(w7 == null || w7.closed) {
+				w7 = window.open("http://tangorin.com/general/" + q);
+			} else {
+				w7.location.href="http://tangorin.com/general/" + q;
+			};
+
+			if(w8 == null || w8.closed) {
+				w8 = window.open("http://www.tanoshiijapanese.com/dictionary/index.cfm?j=" + q + "&e=&search=Search+%3E");
+			} else {
+				w8.location.href="http://www.tanoshiijapanese.com/dictionary/index.cfm?j=" + q + "&e=&search=Search+%3E";
+			};
+
+			if(w9 == null || w9.closed) {
+				w9 = window.open("http://www.kanjidamage.com/kanji/search?utf8=✓&q=" + q);
+			} else {
+				w9.location.href="http://www.kanjidamage.com/kanji/search?utf8=✓&q=" + q;
+			};
+
+			 // window.open("http://www.google.jp/search?q=" + q + "&num=10&hl=jp&tbo=d&site=imghp&tbm=isch&sout=1&biw=1075&bih=696");
+			 // window.open("http://www.forvo.com/word/" + q + "/#jp");
+			 // window.open("http://www.weblio.jp/content/" + q);
+			 // window.open("http://jisho.org/search/" + q);
+			 // window.open("http://eow.alc.co.jp/search?q=" + q + "&ref=sa" + q);
+			 // window.open("http://honyakustar.com/jp/" + q);
+			 // window.open("http://tangorin.com/general/" + q);
+			 // window.open("http://www.tanoshiijapanese.com/dictionary/index.cfm?j=" + q + "&e=&search=Search+%3E");
+			 // window.open("http://www.kanjidamage.com/kanji/search?utf8=✓&q=" + q);
+
+			 document.getElementById("boxu").value = "";
+		}
+	}
+</script>
+
+
+	</body>
+</html>
